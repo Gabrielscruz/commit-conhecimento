@@ -16,7 +16,6 @@ export const generateBannerImage = (
           flexDirection: "column",
           backgroundColor: "#fcf6f1",
           justifyContent: "space-between",
-          fontFamily: "Inter-SemiBold",
           color: "#212121",
           padding: "40px",
         }}
@@ -51,7 +50,6 @@ export const generateBannerImage = (
               padding: "0 0 100px 0",
               letterSpacing: "-0.025em",
               color: "#212121",
-              fontFamily: "Inter-SemiBold",
               lineClamp: 4,
             }}
           >
@@ -76,7 +74,6 @@ export const generateBannerImage = (
     {
       width: 1200,
       height: 600,
-      fonts: [fonts["inter-semibold"], fonts["inter-regular"]],
     }
   );
 };

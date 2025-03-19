@@ -4,39 +4,50 @@ import { config } from "@/config";
 import { signOgImageUrl } from "@/lib/og-image";
 import Markdown from "react-markdown";
 
-const content = `# About Me
+const content = `# Sobre Mim
 
-![Samantha](https://imagedelivery.net/lLmNeOP7HXG0OqaG97wimw/clvlugru90000o4g8ahxp069s/db7abbe3-aa5c-433e-a16d-cbf137d1c9e5.png/public)
+![Gabriel](https://avatars.githubusercontent.com/u/54606517?v=4)
 
-Hey there! I'm Samantha, a 28-year-old former corporate warrior who decided to ditch the 9-to-5 grind and embark on an adventure of a lifetime. After years of hustling in a high-pressure job, I realized that life is too short to be stuck in an office, staring at spreadsheets all day.
+Oi! Eu sou Gabriel, engenheiro de software com mais de 5 anos de experiência no desenvolvimento de soluções tecnológicas para negócios. Ao longo da minha carreira, participei da criação e aprimoramento de sistemas voltados para gestão empresarial, análise de dados e automação de processos, sempre buscando entregar soluções eficientes e inovadoras.
 
-So I took a leap of faith, quit my cushy job in Singapore, and decided to see the world on my own terms. No more stuffy meetings or rigid schedules – just me, my backpack, and an open road ahead.
+Minha experiência inclui liderança de equipes de desenvolvimento, implementação de tecnologias modernas e otimização de sistemas para melhorar a produtividade das empresas. Trabalhei com diversas linguagens e frameworks, incluindo:
 
-![Samantha](https://imagedelivery.net/lLmNeOP7HXG0OqaG97wimw/clvlugru90000o4g8ahxp069s/6b080e65-2329-4a36-ad5c-0a6af8d9aeb1.png/public)
+- **Front-end:** JavaScript, TypeScript, React.js, Next.js, Tailwind CSS, Styled Components.
+- **Mobile:** React Native, Expo, desenvolvimento de aplicativos para iOS e Android.
+- **Back-end:** Node.js, Express, NestJS, PHP, Python, FastAPI.
+- **Banco de Dados:** PostgreSQL, MySQL, MongoDB, Redis, SQL Server.
+- **DevOps e Infraestrutura:** Docker, Kubernetes, NGINX, AWS, CI/CD, GitHub Actions.
+- **ETL e Automação:** Python, DuckDB, Selenium, Power BI, Pipelines de dados.
 
-This blog is where I'll be documenting my travels, sharing my experiences, and hopefully inspiring others to follow their wanderlust. From trekking through remote villages to savoring local cuisines, I'm on a mission to immerse myself in different cultures and create memories that will last a lifetime.
+Nos meus momentos livres, gosto de jogar videogame, assistir ficção científica e passar tempo com minha família. Acredito que equilibrar trabalho e lazer é essencial para manter a criatividade e a produtividade.
 
-But this journey isn't just about checking off destinations from a bucket list. It's about self-discovery, personal growth, and finding the courage to live life on my own terms. I'll be honest and raw, sharing the highs and lows, the moments of pure bliss and the inevitable challenges that come with solo travel.
+Neste blog, vou compartilhar minha jornada no mundo da tecnologia, as lições que aprendi em projetos desafiadores e o impacto que a inovação pode trazer para a vida das pessoas. Também gosto de explorar novas tendências no desenvolvimento de software e como elas podem ser aplicadas para solucionar problemas do dia a dia.
 
-So join me on this adventure, and let's explore the world together! Who knows, maybe my stories will inspire you to take that leap of faith and pursue your own dreams, whatever they may be.
+Vamos explorar juntos o mundo da tecnologia e como ela pode transformar nossas vidas!
 
-Let's go on an adventure!
+Um abraço,
 
-Love,
+Gabriel
 
-Samantha`;
+---
+
+## Meus Links
+
+- [LinkedIn](https://www.linkedin.com/in/seu-perfil)
+- [GitHub](https://github.com/seu-usuario)
+`;
 
 export async function generateMetadata() {
   return {
-    title: "About Me",
-    description: "Learn more about Samantha and her travel adventures",
+    title: "Sobre mim",
+    description: "Saiba mais sobre Gabriel e seus projetos na tecnologia",
     openGraph: {
-      title: "About Me",
-      description: "Learn more about Samantha and her travel adventures",
+      title: "Sobre mim",
+      description: "Saiba mais sobre Gabriel e seus projetos na tecnologia",
       images: [
         signOgImageUrl({
-          title: "Samantha",
-          label: "About Me",
+          title: "Gabriel da Silva Cruz",
+          label: "Sobre mim",
           brand: config.blog.name,
         }),
       ],

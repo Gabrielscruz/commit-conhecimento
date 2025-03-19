@@ -8,10 +8,14 @@ import {
 } from "@/components/ui/sheet";
 import { config } from "@/config";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
+import Logo from "@/assets/imgs/logo.png"
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FunctionComponent } from "react";
+import SearchComponent from "./InputSearch";
+import { DarkModeToggle } from "./DarkModeToggle";
 interface MenuItem {
   name: string;
   href: string;
@@ -19,7 +23,7 @@ interface MenuItem {
 }
 const menuItems: MenuItem[] = [
   { name: "Blog", href: "/" },
-  { name: "About", href: "/about" },
+  { name: "Sobre", href: "/about" },
 ];
 export const Navigation: FunctionComponent = () => {
   const pathname = usePathname();
@@ -33,7 +37,7 @@ export const Navigation: FunctionComponent = () => {
               href={item.href}
               target={item.openInNewTab ? "_blank" : "_self"}
               className={cn(
-                "hover:text-gray-900",
+                `${pathname === item.href && ' border-b-2 degrade'}`,
                 pathname === item.href && "font-semibold"
               )}
             >
@@ -76,11 +80,14 @@ export const Header: FunctionComponent = () => {
   return (
     <section className="flex items-center justify-between mt-8 md:mt-16 mb-12">
       <Link href="/">
-        <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight">
-          {config.blog.name}
-        </h1>
+        <Image src={Logo} alt={config.blog.name} width={200} />
       </Link>
-      <Navigation />
+      <div className="flex flex-row gap-2 items-center">
+        <SearchComponent />
+
+        <Navigation />
+        <DarkModeToggle />
+      </div>
     </section>
   );
 };

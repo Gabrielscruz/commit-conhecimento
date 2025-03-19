@@ -77,4 +77,11 @@
     .blog-content img {
       @apply w-full;
     }
+
+  }
+  @layer components {
+    .degrade {
+      @apply w-full;
+      border-image: linear-gradient(to right, #5569E4, #c492ee) 1;
+    }
   }
