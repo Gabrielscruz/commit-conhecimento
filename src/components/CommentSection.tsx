@@ -25,9 +25,9 @@ export function CommentSection({ slug }: CommentSectionProps) {
 
   return (
     <div className="my-8">
-      <h2 className="mb-8 text-2xl font-bold tracking-tight">Add Comments</h2>
+      <h2 className="mb-8 text-2xl font-bold tracking-tight">Adicionar comentários</h2>
       <CommentForm slug={slug} config={data.config} />
-      <h2 className="mb-8 mt-16 text-2xl font-bold tracking-tight">Comments</h2>
+      <h2 className="mb-8 mt-16 text-2xl font-bold tracking-tight">Comentários</h2>
       <CommentList
         comments={data.comments}
         pagination={data.pagination}

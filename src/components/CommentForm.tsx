@@ -115,11 +115,11 @@ export function CommentForm({ slug, config, onSuccess }: CommentFormProps) {
       <Alert className="bg-muted border-none">
         <AlertDescription className="space-y-2 text-center">
           <Shield className="text-muted-foreground mx-auto h-10 w-10" />
-          <div className="font-medium">Pending email verification</div>
+          <div className="font-medium">Verificação de e-mail pendente</div>
           <div className="text-muted-foreground m-auto max-w-lg text-balance text-sm">
-            Thanks for your comment! Please check your email to verify your
-            email and post your comment. If you don&apos;t see it in your inbox,
-            please check your spam folder.
+            Obrigado pelo seu comentário! Por favor, verifique seu e-mail para verificar seu
+            e-mail e postar seu comentário. Se você não vê-lo em sua caixa de entrada,
+            por favor, verifique sua pasta de spam.
           </div>
         </AlertDescription>
       </Alert>
@@ -135,10 +135,10 @@ export function CommentForm({ slug, config, onSuccess }: CommentFormProps) {
             name="author"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Name</FormLabel>
+                <FormLabel>Nome</FormLabel>
                 <FormControl>
                   <Input
-                    placeholder="Your name"
+                    placeholder="Nome"
                     {...field}
                     className="focus-visible:ring-inset"
                   />
@@ -193,10 +193,10 @@ export function CommentForm({ slug, config, onSuccess }: CommentFormProps) {
           name="content"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Comment</FormLabel>
+              <FormLabel>Comentário</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Share your thoughts..."
+                  placeholder="Compartilhe seus pensamentos."
                   className="min-h-[120px] resize-y focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-offset-0"
                   {...field}
                 />
@@ -230,7 +230,7 @@ export function CommentForm({ slug, config, onSuccess }: CommentFormProps) {
 
         <div className="flex items-center justify-between pt-2">
           <Button type="submit" disabled={form.formState.isSubmitting}>
-            Post Comment
+            Postar comentário
           </Button>
         </div>
       </form>
